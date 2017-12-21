@@ -15,6 +15,7 @@
     "classnames": "^2.2.5",
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
+    "enzyme": "^2.9.1",
     "eslint": "4.10.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-loader": "1.9.0",
@@ -53,8 +54,14 @@
     "lint": "eslint ./ || true"
   },
   "jest": {
+    "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "src/**/*.{js,jsx,mjs}",
+      "!**/node_modules/**",
+      "!**/src/registerServiceWorker.js**"
+    ],
+    "coverageReporters": [
+      "lcov"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
@@ -64,6 +71,9 @@
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
     "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
