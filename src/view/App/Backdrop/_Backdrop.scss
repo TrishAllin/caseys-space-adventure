@@ -53,19 +53,19 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 
   .stars {
     background:#000 url(/images/stars.png) repeat top center;
-    z-index:0;
+    z-index:-3;
   }
 
   .twinkling{
     background:transparent url(/images/twinkling.png) repeat top center;
-    z-index:1;
+    z-index:-2;
 
     animation:move-twink-back 500s linear infinite;
   }
 
   .clouds{
     background:transparent url(/images/clouds.png) repeat top center;
-    z-index:3;
+    z-index:-1;
     opacity: 0.8;
 
     animation:move-clouds-back 500s linear infinite;

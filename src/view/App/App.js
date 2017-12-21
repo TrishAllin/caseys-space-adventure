@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
 
 import data from '../../data/csa';
 
 import Backdrop from './Backdrop/Backdrop';
+import Chapter from './Chapter/Chapter';
+
 import classes from './_App.scss';
 
 class App extends Component {
@@ -12,15 +13,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div className={classes.app}>
+      <div className="app-wrapper">
         <Backdrop />
-        <Button />
-        {data ? data.map(chapter =>
-          (<p key={chapter.id}className="App-intro">
-            {chapter.chapterName}
-          </p>),
-        ) : null
-        }
+        <div className={classes.app}>
+          <Chapter data={data} />
+        </div>
       </div>
     );
   }
