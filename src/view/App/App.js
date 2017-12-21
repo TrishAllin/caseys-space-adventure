@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
+
 import data from '../../data/csa';
 
 import Backdrop from './Backdrop/Backdrop';
@@ -12,6 +14,7 @@ class App extends Component {
     return (
       <div className={classes.app}>
         <Backdrop />
+        <Button />
         {data ? data.map(chapter =>
           (<p key={chapter.id}className="App-intro">
             {chapter.chapterName}
