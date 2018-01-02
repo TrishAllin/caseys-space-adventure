@@ -16,7 +16,7 @@ class App extends Component {
       <div className="app-wrapper">
         <Backdrop />
         <div className={classes.app}>
-          <Chapter data={data} />
+          <Chapter chapters={data} />
         </div>
       </div>
     );

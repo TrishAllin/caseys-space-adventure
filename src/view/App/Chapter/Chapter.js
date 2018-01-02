@@ -3,12 +3,13 @@ import React from 'react';
 
 import classes from '../_App.scss';
 
-const Backdrop = ({ data }) => {
+const Backdrop = ({ chapters }) => {
+  console.log(chapters);
   return (
     <div>
-      {data ? data.map(chapter =>
+      {chapters ? chapters.map(chapter =>
         (<p key={chapter.id} className={classes.chapterName}>
-          {chapter.chapterName}
+          {chapter}
         </p>),
       ) : null
       }
