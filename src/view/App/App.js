@@ -5,7 +5,7 @@ import data from '../../data/csa';
 import Backdrop from './Backdrop/Backdrop';
 import Chapter from './Chapter/Chapter';
 
-import classes from './_App.scss';
+// import classes from './_App.scss';
 
 class App extends Component {
   componentDidMount = () => {
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="app-wrapper">
         <Backdrop />
-        <div className={classes.app}>
+        <div className="app">
           <Chapter chapters={data} />
         </div>
       </div>
