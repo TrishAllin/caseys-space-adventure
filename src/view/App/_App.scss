@@ -1,0 +1,12 @@
+@import '../theme/colors';
+@import 'Backdrop/Backdrop';
+
+.app {
+  text-align: center;
+  position: relative;
+  z-index: 0;
+
+  .chapterName {
+    color: $white;
+  }
+}
